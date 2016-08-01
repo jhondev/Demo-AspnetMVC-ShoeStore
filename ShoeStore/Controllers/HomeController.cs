@@ -10,7 +10,7 @@ namespace ShoeStore.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return View(new Domain.ViewModels.ArticleViewModel());
         }
 
         public ActionResult About()

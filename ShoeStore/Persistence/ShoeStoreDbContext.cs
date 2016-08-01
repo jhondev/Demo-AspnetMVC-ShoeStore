@@ -6,12 +6,13 @@ namespace ShoeStore.Persistence
 {
     public class ShoeStoreDbContext : DbContext
     {
-        public DbSet<Article> Articles { get; set; }
-        public DbSet<Store> Stores { get; set; }
+        public IDbSet<Article> Articles { get; set; }
+        public IDbSet<Store> Stores { get; set; }
 
         public ShoeStoreDbContext()
             : base("ShoeStoreConnection")
         {
+            Configuration.LazyLoadingEnabled = false;
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

@@ -7,7 +7,7 @@ namespace ShoeStore.Persistence.EntityConfigurations
     {
         public ArticleConfiguration()
         {
-            Property(a => a.Desription)
+            Property(a => a.Description)
                 .HasMaxLength(255);
 
             Property(a => a.Name)
